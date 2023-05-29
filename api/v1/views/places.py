@@ -89,7 +89,7 @@ def post_place(place_id):
         if key not in ['id', 'user_id', 'city_id', 'created_at', 'updated']:
             setattr(obj, key, value)
     storage.save()
-    """Return a dict""" 
+    """Return a dict"""
     return jsonify(obj.to_dict())
 
 

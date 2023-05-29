@@ -73,7 +73,7 @@ class DBStorage:
 
     def get(self, cls, id):
         """retrieves object based on the class and its ID"""
-        if cls in classes.values() and id and type(id) == str:
+        if cls in classes.values() and id and isinstance(id, str):
             dict_obj = self.all(cls)
             for key, value in dict_obj.items():
                 if key.split(".")[1] == id:

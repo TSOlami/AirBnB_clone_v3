@@ -32,7 +32,10 @@ def del_state(state_id):
     """ Deletes a State object"""
     state = storage.get(State, state_id)
     if state is None:
-        """If the state_id is not linked to any State object, raise a 404 error"""
+        """
+        If the state_id is not linked to any State object,
+        raise a 404 error
+        """
         abort(404)
     state.delete()
     storage.save()

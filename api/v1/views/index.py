@@ -10,7 +10,7 @@ from models import storage
 @app_views.route('/status', strict_slashes=False)
 def status():
     """returns a JSON"""
-return jsonify({"status": "OK"})
+    return jsonify({"status": "OK"})
 
 
 @app_views.route('/api/v1/stats', strict_slashes=False)
@@ -19,7 +19,7 @@ def count():
     retrieves the number of each objects by type
     """
     return jsonify({"amenities": storage.count("Amenity"),
-                    "cities": storage.count("City)",
+                    "cities": storage.count("City"),
                     "places": storage.count("Place"),
                     "reviews": storage.count("Review"),
                     "states": storage.count("State"),
