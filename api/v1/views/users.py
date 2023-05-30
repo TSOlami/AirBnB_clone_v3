@@ -5,7 +5,7 @@ Creates a new view for User object
 from flask import jsonify, make_response, request, abort
 from models import storage
 from models.user import User
-from api.v1.views import app_views
+from api.v1.views import *
 
 
 @app_views.route('/users', methods=['GET'], strict_slashes=False)

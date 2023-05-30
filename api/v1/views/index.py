@@ -3,7 +3,7 @@
 Index
 """
 from flask import Flask, jsonify
-from api.v1.views import api_views
+from api.v1.views import *
 from models import storage
 
 
